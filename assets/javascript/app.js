@@ -15,6 +15,11 @@ function searchArticles(){
 
     }).then(result=>{
         var content = $("#content");
+        result.response.docs.forEach(item => {
+            var title = $("<h1>").text(item.abstract);   
+            content.append(title); 
+        });
+        
         console.log(result);
 
     });
