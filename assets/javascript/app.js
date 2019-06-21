@@ -15,7 +15,7 @@ function searchArticles(){
 
     }).then(result=>{
         var content = $("#content");
-        
+        console.log(result);
 
     });
 }
