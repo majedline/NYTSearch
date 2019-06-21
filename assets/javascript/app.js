@@ -1,12 +1,13 @@
 function searchArticles(){
-
+    event.preventDefault();
     var term = $("#search-term").val().trim();
     var numberRecords = $("#number-of-records").val().trim();
     var startYear = $("#start-year").val().trim();
     var endYear = $("#end-year").val().trim();
 
     var apiKey = "Dd1H4kApNLQLde9FMmEGHBaBG92kcTrn";
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+term+"&api-key="+apiKey+"&count="+numberRecords+"&begin_date="+startYear+"&end_date="+endYear;
+     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+term+"&api-key="+apiKey;
+    //+"&count="+numberRecords+"&begin_date="+startYear+"&end_date="+endYear;
     
     $.ajax({
         
